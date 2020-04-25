@@ -62,7 +62,7 @@ class Tank:
             if not(self.m):
                 self.x+=self.speed 
             self.direct = "RIGHT"
-        if k[pygame.K_SPACE] and self.number == 0 and (pygame.time.get_ticks() - self.start)/1000 >=0.01:
+        if k[pygame.K_SPACE] and self.number == 0 and (pygame.time.get_ticks() - self.start)/1000 >=1:
             self.start = pygame.time.get_ticks()
             color = random.choice(rainbow)
             bullet.append(Bullet(self.center[0]+2*self.length*cos(self.angle*rad),self.center[1]+2*self.length*sin(self.angle*rad),self.angle,color))
