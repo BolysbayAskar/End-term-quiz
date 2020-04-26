@@ -8,7 +8,7 @@ window = pygame.display.set_mode(size)
 pygame.display.set_caption("Tanks")
 fps = pygame.time.Clock()
 #Rainbow
-rainbow = [[255,0,0],[255,165,0],[255,255,0],[0,255,0],[0,191,255],[0,0,255],[128,0,128]]
+rainbow = ((255,0,0)),(255,165,0),(255,255,0),(0,255,0),(0,191,255),(0,0,255),(128,0,128))
 #Words
 Font = pygame.font.SysFont("Times New Roman", 32)
 #Tank
@@ -68,7 +68,7 @@ class Tank:
             bullet.append(Bullet(self.center[0]+2*self.length*cos(self.angle*rad),self.center[1]+2*self.length*sin(self.angle*rad),self.angle,color))
             pygame.mixer.music.load('shotoftank.wav')
             pygame.mixer.music.play()
-            pygame.mixer.music.set_volume(0.08)
+            pygame.mixer.music.set_volume(0.09)
 
         #Player 2
         if k[pygame.K_k] and self.number ==1:
